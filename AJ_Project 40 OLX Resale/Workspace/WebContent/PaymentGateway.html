@@ -1,0 +1,110 @@
+<!DOCTYPE html >
+<html>
+<head>
+<style>
+body{
+       margin:0;
+       padding:0;
+       font-family: sans-serif;
+       background : #004466;
+}
+.box{
+       width: 700px;
+       padding: 40px;
+       position: absolute;
+       top:50%;
+       left: 50%;
+       transform: translate(-50%,-50%);
+       background : #191919;
+       text-align: center;
+}
+.box h2{
+  color: #2db92d;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.box input[type = "text"],.box input[type = "password"],.box input[type = "number"], .box input[type = "month"]{
+  border:0;
+       background: none;
+       display: block;
+  margin:20px auto;
+  text-align:center;
+  border:2px solid #3498db;
+  padding: 15px 85px;
+  width: 200px;
+  outline: none;
+  color:white;
+  border-radius: 24px;
+  transition:0.25s;
+}
+select { 
+   border:0;
+       background: none;
+       display: block;
+  margin:20px auto;
+  text-align-last : center;
+  border:2px solid #3498db;
+  padding: 15px 85px;
+  width: 375px;
+  display: block;
+  outline: none;
+  color:#28a428;
+  border-radius: 24px;
+  transition:0.25s; 
+  position: relative; 
+  cursor: pointer; 
+} 
+.box input[type = "text"]:focus,.box input[type = "password"]:focus,.box input[type = "number"]:focus,.box input[type = "month"]:focus{
+  width:280px;
+  border-color: #2ecc71;
+}
+.search_categories .select{
+  width: 120%;
+  background:url('arrow.png') no-repeat;
+  background-position:80% center;
+}
+.box input[type="submit"]
+{
+       border:0;
+       background: none;
+       display: block;
+  margin:20px auto;
+  text-align:center;
+  border:2px solid #2ecc71;
+  padding: 14px 60px;
+  outline: none;
+  color:white;
+  border-radius: 24px;
+  transition:0.25s;
+  cursor:pointer;
+}
+.box input[type="submit"]:hover{
+  background: #2ecc71;
+}
+
+input[type = "month"]:before{
+content: attr(placeholder) !important;
+color:#aaa;
+margin-right: 0.5em
+}
+input[type = "month"]:focus:before,
+input[type = "month"]:valid:before{
+content: "";
+}
+</style>
+</script>
+</head>
+<TITLE>Payment</title>
+<body>
+              <form class="box" action="paymentSuccessful.jsp" method="post">
+      <h2>Payment</h2>
+      <input type="text" name="name" placeholder="Name" required>
+      <input type="number" name="card_num" placeholder="16 digit Card No" required>
+       <input type="number" name="cvv" placeholder="CVV Number" required>
+      
+       
+          <input type="month" name="Expiry month" placeholder="Expiry date" required>
+    <input type="submit" value="Pay" >
+              </form> 
+</body>
+</html>
